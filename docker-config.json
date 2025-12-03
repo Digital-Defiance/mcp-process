@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "description": "Secure default configuration for MCP Process Server in Docker",
+  "allowedExecutables": ["node", "npm", "npx", "python3", "pip3", "git"],
+  "blockSetuidExecutables": true,
+  "blockShellInterpreters": true,
+  "defaultResourceLimits": {
+    "maxCpuPercent": 80,
+    "maxMemoryMB": 512,
+    "maxFileDescriptors": 512,
+    "maxCpuTime": 300,
+    "maxProcesses": 5
+  },
+  "maxConcurrentProcesses": 5,
+  "maxProcessLifetime": 1800,
+  "allowProcessTermination": true,
+  "allowGroupTermination": true,
+  "allowForcedTermination": false,
+  "allowStdinInput": true,
+  "allowOutputCapture": true,
+  "enableAuditLog": true,
+  "requireConfirmation": false,
+  "additionalBlockedEnvVars": [],
+  "allowedWorkingDirectories": []
+}

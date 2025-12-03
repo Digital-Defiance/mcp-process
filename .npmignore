@@ -1,0 +1,45 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+
+# Test files
+**/*.spec.ts
+**/*.test.ts
+**/*.spec.js
+**/*.test.js
+test-output/
+coverage/
+jest.config.*
+.spec.swcrc
+
+# Build artifacts
+*.tsbuildinfo
+tsconfig.*.json
+tsconfig.json
+
+# Development files
+.vscode/
+.idea/
+*.log
+node_modules/
+.DS_Store
+.env
+.env.*
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation (keep README, LICENSE, and Docker docs)
+*.md
+!README.md
+!LICENSE
+!DOCKER.md
+!SECURITY.md
+
+# Git
+.git/
+.gitignore
+.gitattributes

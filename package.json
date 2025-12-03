@@ -1,0 +1,112 @@
+{
+  "name": "@ai-capabilities-suite/mcp-process",
+  "version": "0.1.0",
+  "packageManager": "yarn@4.12.0",
+  "description": "MCP server for process management and monitoring with strict security boundaries. Launch processes, monitor resources, manage services, and orchestrate workflows - all within secure, configurable boundaries.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": "./dist/cli.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "@ts-mcp/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "DOCKER.md",
+    "SECURITY.md",
+    "Dockerfile",
+    "docker-compose.yml",
+    "docker-config.json",
+    "!**/*.tsbuildinfo",
+    "!**/*.spec.js",
+    "!**/*.test.js"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "test": "jest --maxWorkers=1 --forceExit",
+    "test:e2e": "jest --testPathPattern=e2e.spec.ts --maxWorkers=1 --forceExit",
+    "test:e2e:minimal": "jest --testPathPattern=minimal.e2e.spec.ts --maxWorkers=1 --forceExit",
+    "test:coverage": "jest --coverage --maxWorkers=1 --forceExit",
+    "test:watch": "jest --watch",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "lint": "eslint src",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build && npm test",
+    "publish:public": "npm publish --access public",
+    "docker:build": "docker build -t mcp-process:local .",
+    "docker:test": "bash scripts/docker-test.sh",
+    "docker:run": "docker-compose up -d",
+    "docker:stop": "docker-compose down",
+    "docker:logs": "docker-compose logs -f"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "process-management",
+    "process-monitoring",
+    "resource-monitoring",
+    "security",
+    "ai-agent",
+    "nodejs",
+    "process-launcher",
+    "service-management",
+    "resource-limits",
+    "process-orchestration",
+    "allowlist",
+    "audit-logging",
+    "ai-capabilities"
+  ],
+  "author": {
+    "name": "Digital Defiance",
+    "email": "info@digitaldefiance.org",
+    "url": "https://digitaldefiance.org"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-defiance/ai-capabilities-suite.git",
+    "directory": "packages/mcp-process"
+  },
+  "bugs": {
+    "url": "https://github.com/digital-defiance/ai-capabilities-suite/issues",
+    "email": "info@digitaldefiance.org"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.23.0",
+    "minimatch": "^10.0.1",
+    "pidusage": "^3.0.2",
+    "uuid": "^8.3.2",
+    "which": "^4.0.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.15.3",
+    "@swc/helpers": "^0.5.17",
+    "@swc/jest": "^0.2.39",
+    "@types/node": "^20.10.6",
+    "@types/pidusage": "^2.0.5",
+    "@types/uuid": "^10.0.0",
+    "@types/which": "^3.0.4",
+    "fast-check": "^4.3.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.3"
+  }
+}

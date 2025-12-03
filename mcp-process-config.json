@@ -1,0 +1,22 @@
+{
+  "allowedExecutables": ["node", "npm", "echo", "cat", "ls", "pwd", "sleep"],
+  "blockSetuidExecutables": true,
+  "blockShellInterpreters": false,
+  "defaultResourceLimits": {
+    "maxCpuPercent": 80,
+    "maxMemoryMB": 1024,
+    "maxFileDescriptors": 1024,
+    "maxCpuTime": 300,
+    "maxProcesses": 10
+  },
+  "maxConcurrentProcesses": 100,
+  "maxProcessLifetime": 3600,
+  "maxLaunchesPerMinute": 1000,
+  "allowProcessTermination": true,
+  "allowGroupTermination": true,
+  "allowForcedTermination": true,
+  "allowStdinInput": true,
+  "allowOutputCapture": true,
+  "enableAuditLog": false,
+  "requireConfirmation": false
+}

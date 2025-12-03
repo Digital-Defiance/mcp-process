@@ -1,0 +1,27 @@
+{
+  "allowedExecutables": [
+    "node",
+    "npm",
+    "yarn",
+    "python3",
+    "git"
+  ],
+  "blockSetuidExecutables": true,
+  "blockShellInterpreters": true,
+  "defaultResourceLimits": {
+    "maxCpuPercent": 80,
+    "maxMemoryMB": 1024,
+    "maxFileDescriptors": 1024,
+    "maxCpuTime": 300,
+    "maxProcesses": 10
+  },
+  "maxConcurrentProcesses": 10,
+  "maxProcessLifetime": 3600,
+  "allowProcessTermination": true,
+  "allowGroupTermination": true,
+  "allowForcedTermination": true,
+  "allowStdinInput": true,
+  "allowOutputCapture": true,
+  "enableAuditLog": true,
+  "requireConfirmation": false
+}

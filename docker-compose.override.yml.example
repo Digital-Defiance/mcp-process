@@ -1,0 +1,42 @@
+# Docker Compose Override Example
+# Copy this file to docker-compose.override.yml for local development
+# This file is automatically loaded by docker-compose and overrides settings
+
+version: '3.8'
+
+services:
+  mcp-process:
+    # Use local build instead of pulling from registry
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    # Development environment
+    environment:
+      - NODE_ENV=development
+      - MCP_PROCESS_CONFIG_PATH=/app/config/mcp-process-config.json
+      - DEBUG=mcp:*
+    
+    # Mount source code for development (if needed)
+    volumes:
+      - ./config:/app/config:ro
+      - ./workspace:/workspace:rw
+      # Uncomment to mount source for live development
+      # - ./src:/app/src:ro
+      # - ./dist:/app/dist:rw
+    
+    # More permissive resource limits for development
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4G
+        reservations:
+          cpus: '1.0'
+          memory: 1G
+    
+    # Enable network for development tools
+    network_mode: bridge
+    
+    # Restart on failure for easier debugging
+    restart: on-failure
