@@ -1,6 +1,7 @@
 {
   "name": "@ai-capabilities-suite/mcp-process",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "mcpName": "io.github.Digital-Defiance/mcp-process",
   "packageManager": "yarn@4.12.0",
   "description": "MCP server for process management and monitoring with strict security boundaries. Launch processes, monitor resources, manage services, and orchestrate workflows - all within secure, configurable boundaries.",
   "main": "./dist/index.js",

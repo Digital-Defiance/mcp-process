@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
+  "name": "io.github.Digital-Defiance/mcp-process",
+  "description": "Process management and monitoring for AI agents with strict security boundaries",
+  "repository": {
+    "url": "https://github.com/digital-defiance/ai-capabilities-suite",
+    "source": "github",
+    "subfolder": "packages/mcp-process"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@ai-capabilities-suite/mcp-process",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
