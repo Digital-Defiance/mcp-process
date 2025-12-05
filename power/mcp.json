@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "acs-process": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@ai-capabilities-suite/mcp-process@latest"
+      ],
+      "env": {}
+    }
+  }
+}
