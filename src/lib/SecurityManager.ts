@@ -126,11 +126,6 @@ export class SecurityManager implements ISecurityManager {
     } else {
       this.allowedWorkingDirs = null;
     }
-
-    // Validate allowlist is not empty
-    if (this.allowlist.size === 0) {
-      throw new Error("Executable allowlist cannot be empty");
-    }
   }
 
   /**
@@ -180,16 +175,19 @@ export class SecurityManager implements ISecurityManager {
     }
 
     // Layer 5: Check allowlist
-    const isAllowed = Array.from(this.allowlist).some((pattern) => {
-      if (pattern.includes("*")) {
-        return minimatch(resolved, pattern) || minimatch(basename, pattern);
-      }
-      return resolved === pattern || basename === pattern;
-    });
+    // If allowlist is empty, allow all executables (except dangerous/blocked ones checked above)
+    if (this.allowlist.size > 0) {
+      const isAllowed = Array.from(this.allowlist).some((pattern) => {
+        if (pattern.includes("*")) {
+          return minimatch(resolved, pattern) || minimatch(basename, pattern);
+        }
+        return resolved === pattern || basename === pattern;
+      });
 
-    if (!isAllowed) {
-      this.auditSecurityViolation("not_in_allowlist", executable, resolved);
-      throw new SecurityError("Executable not in allowlist");
+      if (!isAllowed) {
+        this.auditSecurityViolation("not_in_allowlist", executable, resolved);
+        throw new SecurityError("Executable not in allowlist");
+      }
     }
 
     // Layer 6: Validate arguments for injection attacks

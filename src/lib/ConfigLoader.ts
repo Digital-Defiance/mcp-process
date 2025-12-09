@@ -181,14 +181,6 @@ export class ConfigLoader {
    * Validate configuration
    */
   private static validateConfig(config: SecurityConfig): void {
-    // Validate allowlist is not empty
-    if (!config.allowedExecutables || config.allowedExecutables.length === 0) {
-      throw new Error(
-        "Security configuration error: allowedExecutables cannot be empty. " +
-          "You must specify at least one allowed executable."
-      );
-    }
-
     // Validate resource limits
     if (!config.defaultResourceLimits) {
       throw new Error(
