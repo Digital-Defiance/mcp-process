@@ -103,6 +103,15 @@ export class ConfigLoader {
    * 3. Use default configuration
    */
   static load(): SecurityConfig {
+    // Try environment variable for config JSON
+    if (process.env["MCP_PROCESS_CONFIG"]) {
+      try {
+        return this.loadFromEnv("MCP_PROCESS_CONFIG");
+      } catch (error) {
+        console.error("[ConfigLoader] Failed to load from env var:", error);
+      }
+    }
+
     // Try environment variable for config path
     const configPath = process.env["MCP_PROCESS_CONFIG_PATH"];
     if (configPath) {
