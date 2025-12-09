@@ -12,7 +12,7 @@ on:
         default: "latest"
 
 env:
-  DOCKER_IMAGE: digidefiance/mcp-process
+  DOCKER_IMAGE: digitaldefiance/mcp-process
   PLATFORMS: linux/amd64,linux/arm64
 
 jobs:
