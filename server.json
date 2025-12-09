@@ -7,13 +7,13 @@
     "source": "github",
     "subfolder": "packages/mcp-process"
   },
-  "version": "0.1.3",
+  "version": "1.5.7",
   "websiteUrl": "https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@ai-capabilities-suite/mcp-process",
-      "version": "0.1.3",
+      "version": "1.5.7",
       "transport": {
         "type": "stdio"
       }
