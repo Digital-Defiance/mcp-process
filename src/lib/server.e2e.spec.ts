@@ -53,10 +53,10 @@ function logDiagnostic(category: string, message: string, data?: any): void {
 }
 
 /**
- * End-to-End tests for MCP Process Server
+ * End-to-End tests for MCP ACS Process Server
  * Tests the actual MCP protocol communication via stdio
  */
-describe("MCP Process Server - E2E", () => {
+describe("MCP ACS Process Server - E2E", () => {
   /**
    * Token Bucket Rate Limiter
    * Industry-standard algorithm used by p-throttle, AWS API Gateway, etc.

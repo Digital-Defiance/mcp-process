@@ -1,5 +1,5 @@
 /**
- * Core interfaces for MCP Process Server
+ * Core interfaces for MCP ACS Process Server
  */
 
 export * from "./IProcessLauncher";

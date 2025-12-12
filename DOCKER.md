@@ -1,6 +1,6 @@
-# MCP Process Server - Docker Guide
+# MCP ACS Process Server - Docker Guide
 
-This guide explains how to run the MCP Process Server using Docker.
+This guide explains how to run the MCP ACS Process Server using Docker.
 
 ## Quick Start
 
@@ -108,7 +108,7 @@ The Docker image implements multiple security layers:
 
 ### Application Security
 
-The MCP Process Server enforces:
+The MCP ACS Process Server enforces:
 
 1. **Executable Allowlist**: Only approved executables can run
 2. **Shell Blocking**: Shell interpreters blocked by default
@@ -426,6 +426,6 @@ spec:
 
 For issues and questions:
 
-- GitHub Issues: https://github.com/digital-defiance/ai-capabilities-suite/issues
-- Documentation: https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process
-- Email: info@digitaldefiance.org
+- GitHub Issues: <https://github.com/digital-defiance/ai-capabilities-suite/issues>
+- Documentation: <https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process>
+- Email: <info@digitaldefiance.org>

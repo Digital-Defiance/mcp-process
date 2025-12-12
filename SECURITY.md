@@ -18,7 +18,7 @@
 
 ## Overview
 
-The MCP Process Server implements defense-in-depth security with multiple layers of validation to ensure AI agents can only perform authorized operations within strict boundaries. This guide explains how to configure security policies for your deployment.
+The MCP ACS Process Server implements defense-in-depth security with multiple layers of validation to ensure AI agents can only perform authorized operations within strict boundaries. This guide explains how to configure security policies for your deployment.
 
 ## Security Architecture
 
@@ -703,6 +703,6 @@ Use multiple security layers together.
 
 For security issues or questions:
 
-- GitHub Issues: https://github.com/digital-defiance/ai-capabilities-suite/issues
-- Email: info@digitaldefiance.org
-- Security vulnerabilities: Please report privately to info@digitaldefiance.org
+- GitHub Issues: <https://github.com/digital-defiance/ai-capabilities-suite/issues>
+- Email: <info@digitaldefiance.org>
+- Security vulnerabilities: Please report privately to <info@digitaldefiance.org>

@@ -1,5 +1,5 @@
 /**
- * MCP Tools - Tool implementations for the MCP Process Server
+ * MCP Tools - Tool implementations for the MCP ACS Process Server
  *
  * Provides 12 MCP tools for process management:
  * 1. process_start - Launch a new process
@@ -36,7 +36,7 @@ import {
 
 /**
  * MCP Tools class
- * Provides all tool implementations for the MCP Process Server
+ * Provides all tool implementations for the MCP ACS Process Server
  */
 export class MCPTools {
   private processLauncher: ProcessLauncher;

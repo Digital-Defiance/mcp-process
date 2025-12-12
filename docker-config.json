@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
-  "description": "Secure default configuration for MCP Process Server in Docker",
+  "description": "Secure default configuration for MCP ACS Process Server in Docker",
   "allowedExecutables": ["node", "npm", "npx", "python3", "pip3", "git"],
   "blockSetuidExecutables": true,
   "blockShellInterpreters": true,

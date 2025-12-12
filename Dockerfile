@@ -1,4 +1,4 @@
-# MCP Process Server - Optimized Docker Image
+# MCP ACS Process Server - Optimized Docker Image
 # Multi-stage build for minimal image size and security
 
 # Stage 1: Build
@@ -76,7 +76,7 @@ ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["node", "dist/cli.js"]
 
 # Labels for metadata
-LABEL org.opencontainers.image.title="MCP Process Server" \
+LABEL org.opencontainers.image.title="MCP ACS Process Server" \
       org.opencontainers.image.description="Process management and monitoring for AI agents with strict security boundaries" \
       org.opencontainers.image.vendor="Digital Defiance" \
       org.opencontainers.image.authors="info@digitaldefiance.org" \

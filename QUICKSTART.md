@@ -1,4 +1,4 @@
-# MCP Process Server - Quick Start Guide
+# MCP ACS Process Server - Quick Start Guide
 
 ## Installation
 
@@ -82,7 +82,7 @@ Add to your MCP client configuration (e.g., Kiro's `mcp.json`):
 
 ## Available Tools
 
-The MCP Process Server provides 12 tools:
+The MCP ACS Process Server provides 12 tools:
 
 1. **process_start** - Launch a new process
 2. **process_terminate** - Terminate a process
@@ -197,5 +197,5 @@ See the full [README.md](./README.md) for advanced configuration options includi
 
 For issues, questions, or contributions:
 
-- GitHub: https://github.com/digital-defiance/ai-capabilities-suite
-- Issues: https://github.com/digital-defiance/ai-capabilities-suite/issues
+- GitHub: <https://github.com/digital-defiance/ai-capabilities-suite>
+- Issues: <https://github.com/digital-defiance/ai-capabilities-suite/issues>

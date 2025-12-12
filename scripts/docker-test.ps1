@@ -1,4 +1,4 @@
-# Docker Testing Script for MCP Process Server (PowerShell)
+# Docker Testing Script for MCP ACS Process Server (PowerShell)
 # This script helps test the Docker image locally before publishing
 
 $ErrorActionPreference = "Stop"
@@ -8,7 +8,7 @@ $IMAGE_NAME = "mcp-process:test"
 $CONTAINER_NAME = "mcp-process-test"
 $CONFIG_DIR = "./test-docker-config"
 
-Write-Host "=== MCP Process Server - Docker Test Script ===" -ForegroundColor Green
+Write-Host "=== MCP ACS Process Server - Docker Test Script ===" -ForegroundColor Green
 Write-Host ""
 
 function Print-Step {

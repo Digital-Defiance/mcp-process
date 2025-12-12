@@ -1,5 +1,5 @@
 #!/bin/bash
-# Docker Testing Script for MCP Process Server
+# Docker Testing Script for MCP ACS Process Server
 # This script helps test the Docker image locally before publishing
 
 set -e
@@ -15,7 +15,7 @@ IMAGE_NAME="mcp-process:test"
 CONTAINER_NAME="mcp-process-test"
 CONFIG_DIR="./test-docker-config"
 
-echo -e "${GREEN}=== MCP Process Server - Docker Test Script ===${NC}\n"
+echo -e "${GREEN}=== MCP ACS Process Server - Docker Test Script ===${NC}\n"
 
 # Function to print step
 print_step() {

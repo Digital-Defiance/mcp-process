@@ -1,4 +1,4 @@
-# MCP Process Server - Technical Documentation
+# MCP ACS Process Server - Technical Documentation
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@
 
 ## Architecture Overview
 
-The MCP Process Server is built with a modular architecture consisting of several core components:
+The MCP ACS Process Server is built with a modular architecture consisting of several core components:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -53,12 +53,12 @@ Main server class that orchestrates all components.
 
 ```typescript
 /**
- * MCP Process Server
+ * MCP ACS Process Server
  * Main server class that orchestrates all components
  */
 class MCPServer {
   /**
-   * Create a new MCP Process Server
+   * Create a new MCP ACS Process Server
    * @param config Optional security configuration (loads from file if not provided)
    */
   constructor(config?: SecurityConfig);
@@ -821,6 +821,6 @@ try {
 
 For technical questions or issues:
 
-- GitHub Issues: https://github.com/digital-defiance/ai-capabilities-suite/issues
-- Email: info@digitaldefiance.org
-- Documentation: https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process
+- GitHub Issues: <https://github.com/digital-defiance/ai-capabilities-suite/issues>
+- Email: <info@digitaldefiance.org>
+- Documentation: <https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-process>

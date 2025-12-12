@@ -1,7 +1,7 @@
 /**
- * MCP Process Server - Integration Tests
+ * MCP ACS Process Server - Integration Tests
  *
- * These tests validate end-to-end workflows for the MCP Process Server,
+ * These tests validate end-to-end workflows for the MCP ACS Process Server,
  * testing the interaction between multiple components.
  */
 

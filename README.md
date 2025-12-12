@@ -1,4 +1,4 @@
-# MCP Process Server
+# MCP ACS Process Server
 
 A Model Context Protocol (MCP) server that provides process management and monitoring capabilities for AI agents, with strict security boundaries enforced by executable allowlists and resource limits.
 
@@ -625,7 +625,7 @@ npm run test:e2e:minimal
 
 #### End-to-End (E2E) Testing
 
-The MCP Process Server includes comprehensive e2e tests that validate the complete system behavior by spawning the server as a child process and communicating via stdio using JSON-RPC protocol. These tests ensure the server works correctly in real-world usage scenarios.
+The MCP ACS Process Server includes comprehensive e2e tests that validate the complete system behavior by spawning the server as a child process and communicating via stdio using JSON-RPC protocol. These tests ensure the server works correctly in real-world usage scenarios.
 
 **E2E Test Structure:**
 
@@ -721,6 +721,7 @@ If e2e tests fail, follow these steps:
 
 8. **Enable debug logging:**
    Set `DEBUG=*` environment variable to see detailed logs:
+
    ```bash
    DEBUG=* npm test -- --testPathPattern=e2e.spec.ts
    ```
@@ -798,7 +799,7 @@ npm run publish:public
 
 ## Architecture
 
-The MCP Process Server consists of several core components:
+The MCP ACS Process Server consists of several core components:
 
 - **MCPServer**: Main server implementing MCP protocol
 - **SecurityManager**: Multi-layer security validation
@@ -815,7 +816,7 @@ The MCP Process Server consists of several core components:
 ## Contributing
 
 Contributions are welcome! Please see the main repository for contribution guidelines:
-https://github.com/digital-defiance/ai-capabilities-suite
+<https://github.com/digital-defiance/ai-capabilities-suite>
 
 ## License
 
@@ -823,14 +824,14 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 
 ## Support
 
-- GitHub Issues: https://github.com/digital-defiance/ai-capabilities-suite/issues
-- Email: info@digitaldefiance.org
+- GitHub Issues: <https://github.com/digital-defiance/ai-capabilities-suite/issues>
+- Email: <info@digitaldefiance.org>
 
 ## Related Projects
 
 - [MCP Filesystem](https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-filesystem) - Filesystem operations for AI agents
 - [MCP Recording](https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-recording) - Session recording and playback
-- [MCP Debugger](https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-debugger) - MCP protocol debugging tools
+- [MCP ACS Debugger](https://github.com/digital-defiance/ai-capabilities-suite/tree/main/packages/mcp-debugger) - MCP protocol debugging tools
 
 ## Acknowledgments
 

@@ -1,6 +1,6 @@
 # Docker Implementation Summary
 
-This document summarizes the Docker implementation for the MCP Process Server.
+This document summarizes the Docker implementation for the MCP ACS Process Server.
 
 ## Files Created
 
@@ -400,4 +400,4 @@ The Docker implementation provides:
 - **Testing**: Automated and manual test scripts
 - **Flexibility**: Development and production configurations
 
-The implementation follows Docker and security best practices while maintaining the strict security boundaries of the MCP Process Server.
+The implementation follows Docker and security best practices while maintaining the strict security boundaries of the MCP ACS Process Server.

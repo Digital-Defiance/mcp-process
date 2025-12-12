@@ -1,5 +1,5 @@
 /**
- * Core type definitions for MCP Process Server
+ * Core type definitions for MCP ACS Process Server
  */
 
 /**

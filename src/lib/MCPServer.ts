@@ -1,7 +1,7 @@
 /**
  * MCP Server - Main server implementation
  *
- * Initializes and manages the MCP Process Server with stdio transport.
+ * Initializes and manages the MCP ACS Process Server with stdio transport.
  * Handles server lifecycle, tool registration, and graceful shutdown.
  */
 
@@ -25,7 +25,7 @@ import { ErrorHandler } from "./ErrorHandler";
 import { SecurityConfig } from "../types";
 
 /**
- * MCP Process Server
+ * MCP ACS Process Server
  * Main server class that orchestrates all components
  */
 export class MCPServer {
@@ -141,7 +141,7 @@ export class MCPServer {
       throw new Error("Server is already running");
     }
 
-    console.error("[MCP Server] Starting MCP Process Server v0.0.1");
+    console.error("[MCP Server] Starting MCP ACS Process Server v0.0.1");
     console.error("[MCP Server] Initializing with security configuration...");
 
     try {

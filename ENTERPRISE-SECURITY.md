@@ -2,11 +2,12 @@
 
 ## Overview
 
-The MCP Process Server provides defense-in-depth security with fine-grained controls suitable for enterprise environments. Every aspect of process execution can be restricted and monitored.
+The MCP ACS Process Server provides defense-in-depth security with fine-grained controls suitable for enterprise environments. Every aspect of process execution can be restricted and monitored.
 
 ## Security Layers
 
 ### 1. Executable Control
+
 **What can be launched?**
 
 ```json
@@ -24,6 +25,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Setuid/setgid blocking**: Prevent privilege escalation (Unix/Linux)
 
 ### 2. Argument Control
+
 **What arguments can be passed?**
 
 ```json
@@ -40,6 +42,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Pattern blocking**: Block specific argument patterns via regex
 
 ### 3. Environment Control
+
 **What environment variables can be set?**
 
 ```json
@@ -56,6 +59,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Size limits**: 4KB per variable, 64KB total
 
 ### 4. Working Directory Control
+
 **Where can processes run?**
 
 ```json
@@ -70,6 +74,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Path validation**: Prevent path traversal
 
 ### 5. Resource Limits
+
 **How much can processes consume?**
 
 ```json
@@ -96,6 +101,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Strict enforcement**: Immediate termination on violation
 
 ### 6. Process Limits
+
 **How many processes can run?**
 
 ```json
@@ -112,6 +118,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Total limits**: Lifetime process count
 
 ### 7. Rate Limiting
+
 **How fast can processes be launched?**
 
 ```json
@@ -127,6 +134,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Cooldown periods**: Enforce waiting after violations
 
 ### 8. Termination Control
+
 **What can be terminated?**
 
 ```json
@@ -144,6 +152,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Managed-only**: Only processes created by agent can be terminated
 
 ### 9. I/O Control
+
 **What I/O operations are allowed?**
 
 ```json
@@ -161,6 +170,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Binary blocking**: Prevent binary data injection
 
 ### 10. Isolation (Unix/Linux)
+
 **How are processes isolated?**
 
 ```json
@@ -191,6 +201,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Seccomp**: Syscall filtering (whitelist allowed syscalls)
 
 ### 11. Network Control
+
 **What network access is allowed?**
 
 ```json
@@ -207,6 +218,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Implemented via**: Network namespaces, iptables, or firewall rules
 
 ### 12. Audit & Monitoring
+
 **How is activity tracked?**
 
 ```json
@@ -225,6 +237,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Forensics**: Timestamps, commands, PIDs, results
 
 ### 13. Confirmation & Approval
+
 **What requires human approval?**
 
 ```json
@@ -241,6 +254,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Human-in-the-loop**: Prevent autonomous dangerous operations
 
 ### 14. Time Restrictions
+
 **When can processes run?**
 
 ```json
@@ -255,6 +269,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 - **Cron-like syntax**: Flexible time specifications
 
 ### 15. Advanced Security (Linux)
+
 **Additional hardening?**
 
 ```json
@@ -275,6 +290,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 ## Example Configurations
 
 ### Maximum Security (Zero Trust)
+
 ```json
 {
   "allowedExecutables": ["node"],
@@ -322,6 +338,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 ```
 
 ### Development Environment (Moderate Security)
+
 ```json
 {
   "allowedExecutables": ["node", "npm", "git", "python3", "pip3"],
@@ -347,6 +364,7 @@ The MCP Process Server provides defense-in-depth security with fine-grained cont
 ```
 
 ### CI/CD Pipeline (Balanced Security)
+
 ```json
 {
   "allowedExecutables": ["node", "npm", "yarn", "git", "docker", "kubectl"],

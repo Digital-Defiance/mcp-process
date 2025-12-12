@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * MCP Process Server - CLI Entry Point
+ * MCP ACS Process Server - CLI Entry Point
  *
- * Starts the MCP Process Server with stdio transport.
+ * Starts the MCP ACS Process Server with stdio transport.
  * Configuration is loaded from file or environment.
  */
 
@@ -23,7 +23,7 @@ async function main() {
     // Check for --help flag
     if (process.argv.includes("--help") || process.argv.includes("-h")) {
       console.error(`
-MCP Process Server - Process management for AI agents
+MCP ACS Process Server - Process management for AI agents
 
 Usage:
   mcp-process [options]

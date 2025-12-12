@@ -52,11 +52,11 @@ function logDiagnostic(category: string, message: string, data?: any): void {
 }
 
 /**
- * Minimal End-to-End Smoke Tests for MCP Process Server
+ * Minimal End-to-End Smoke Tests for MCP ACS Process Server
  * Quick validation of basic functionality (< 30 seconds)
  * Requirements: 12.1, 12.2, 12.3
  */
-describe("MCP Process Server - Minimal E2E", () => {
+describe("MCP ACS Process Server - Minimal E2E", () => {
   let serverProcess: ChildProcess | null = null;
   let messageId = 0;
 
