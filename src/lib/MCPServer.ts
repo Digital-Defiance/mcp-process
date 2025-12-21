@@ -145,13 +145,14 @@ export class MCPServer {
     console.error("[MCP Server] Initializing with security configuration...");
 
     try {
-      // Register handlers
-      this.registerHandlers();
-      console.error("[MCP Server] Registered 12 MCP tools");
-
-      // Connect transport
+      // Connect transport FIRST so we can start receiving requests immediately
+      // The server will buffer any requests until handlers are registered
       await this.server.connect(this.transport);
       console.error("[MCP Server] Connected stdio transport");
+
+      // Register handlers - these can now handle any buffered requests
+      this.registerHandlers();
+      console.error("[MCP Server] Registered 12 MCP tools");
 
       this.isRunning = true;
       console.error(
